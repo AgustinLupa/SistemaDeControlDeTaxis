@@ -31,10 +31,10 @@
             this.lbAutoNoDispo = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pDestino = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtLugarDeDestino = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelarPan = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtLugarDeDestino = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pDestino.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,25 +77,18 @@
             this.pDestino.TabIndex = 17;
             this.pDestino.Visible = false;
             // 
-            // label1
+            // btnCancelarPan
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(93, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lugar de destino";
-            // 
-            // txtLugarDeDestino
-            // 
-            this.txtLugarDeDestino.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugarDeDestino.Location = new System.Drawing.Point(336, 132);
-            this.txtLugarDeDestino.Name = "txtLugarDeDestino";
-            this.txtLugarDeDestino.Size = new System.Drawing.Size(161, 29);
-            this.txtLugarDeDestino.TabIndex = 1;
+            this.btnCancelarPan.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCancelarPan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPan.ForeColor = System.Drawing.Color.Gold;
+            this.btnCancelarPan.Location = new System.Drawing.Point(488, 280);
+            this.btnCancelarPan.Name = "btnCancelarPan";
+            this.btnCancelarPan.Size = new System.Drawing.Size(111, 58);
+            this.btnCancelarPan.TabIndex = 3;
+            this.btnCancelarPan.Text = "Cancelar";
+            this.btnCancelarPan.UseVisualStyleBackColor = false;
+            this.btnCancelarPan.Click += new System.EventHandler(this.btnCancelarPan_Click);
             // 
             // btnGuardar
             // 
@@ -110,18 +103,25 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnCancelarPan
+            // txtLugarDeDestino
             // 
-            this.btnCancelarPan.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCancelarPan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPan.ForeColor = System.Drawing.Color.Gold;
-            this.btnCancelarPan.Location = new System.Drawing.Point(488, 280);
-            this.btnCancelarPan.Name = "btnCancelarPan";
-            this.btnCancelarPan.Size = new System.Drawing.Size(111, 58);
-            this.btnCancelarPan.TabIndex = 3;
-            this.btnCancelarPan.Text = "Cancelar";
-            this.btnCancelarPan.UseVisualStyleBackColor = false;
-            this.btnCancelarPan.Click += new System.EventHandler(this.btnCancelarPan_Click);
+            this.txtLugarDeDestino.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugarDeDestino.Location = new System.Drawing.Point(336, 132);
+            this.txtLugarDeDestino.Name = "txtLugarDeDestino";
+            this.txtLugarDeDestino.Size = new System.Drawing.Size(161, 29);
+            this.txtLugarDeDestino.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(93, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Lugar de destino";
             // 
             // CambiarDisponibilidad
             // 
@@ -134,6 +134,7 @@
             this.Controls.Add(this.pDestino);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbAutoNoDispo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CambiarDisponibilidad";
             this.Text = "Cambiar Disponibilidad";
             this.Load += new System.EventHandler(this.CambiarDisponibilidad_Load);

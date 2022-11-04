@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnAuto);
             this.Controls.Add(this.btnCambiarDispo);
             this.ForeColor = System.Drawing.Color.Gold;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.pViajes.ResumeLayout(false);

@@ -34,7 +34,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtSalida = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numDNI = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.brnVolverMenu = new System.Windows.Forms.Button();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.PAltaPasajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDNI)).BeginInit();
             this.SuspendLayout();
@@ -64,11 +64,11 @@
             // PAltaPasajero
             // 
             this.PAltaPasajero.BackColor = System.Drawing.Color.SaddleBrown;
+            this.PAltaPasajero.Controls.Add(this.txtTel);
             this.PAltaPasajero.Controls.Add(this.btnCancelar);
             this.PAltaPasajero.Controls.Add(this.btnGuardar);
             this.PAltaPasajero.Controls.Add(this.txtSalida);
             this.PAltaPasajero.Controls.Add(this.label7);
-            this.PAltaPasajero.Controls.Add(this.txtTel);
             this.PAltaPasajero.Controls.Add(this.label6);
             this.PAltaPasajero.Controls.Add(this.numDNI);
             this.PAltaPasajero.Controls.Add(this.label5);
@@ -126,14 +126,6 @@
             this.label7.Size = new System.Drawing.Size(124, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Lugar de salida";
-            // 
-            // txtTel
-            // 
-            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtTel.Location = new System.Drawing.Point(214, 183);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 26);
-            this.txtTel.TabIndex = 11;
             // 
             // label6
             // 
@@ -249,6 +241,15 @@
             this.brnVolverMenu.UseVisualStyleBackColor = false;
             this.brnVolverMenu.Click += new System.EventHandler(this.brnVolverMenu_Click);
             // 
+            // txtTel
+            // 
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.txtTel.Location = new System.Drawing.Point(214, 186);
+            this.txtTel.Mask = "(999)0000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(130, 26);
+            this.txtTel.TabIndex = 16;
+            // 
             // Autos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +261,7 @@
             this.Controls.Add(this.PAltaPasajero);
             this.Controls.Add(this.lbAuto);
             this.Controls.Add(this.brnVolverMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Autos";
             this.Text = "Autos";
             this.Load += new System.EventHandler(this.Autos_Load);
@@ -278,7 +280,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtSalida;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numDNI;
         private System.Windows.Forms.Label label5;
@@ -289,5 +290,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button brnVolverMenu;
+        private System.Windows.Forms.MaskedTextBox txtTel;
     }
 }
